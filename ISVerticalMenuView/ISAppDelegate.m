@@ -7,12 +7,17 @@
 //
 
 #import "ISAppDelegate.h"
+#import "ISDemoViewController.h"
 
 @implementation ISAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    ISDemoViewController * demovc = [[ISDemoViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = demovc;
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
